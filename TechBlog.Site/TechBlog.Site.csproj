@@ -115,17 +115,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DetailPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Base\GlassBase.cs" />
+    <Compile Include="Models\ListCmt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,7 +147,13 @@
     <Content Include="App_Config\Include\Glass\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass\Glass.Mapper.Sc.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\Detail\Layout\DetaiLayout.cshtml" />
+    <Content Include="Views\Detail\commentPage.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,7 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\Test\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,49 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("name page")</title>
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <h1>@Html.Sitecore().Field("name page")</h1>
+    <div>
+        <h3>lorem ipsum</h3>
+        <p>
+            What is Lorem Ipsum?<hr />
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p>
+            What is Lorem Ipsum?<hr />
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p>
+            What is Lorem Ipsum?<hr />
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p>
+            What is Lorem Ipsum?<hr />
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+    <div class="litscomment">
+        @Html.Sitecore().Placeholder("list comment")
+    </div>
+    <div>
+        <form>
+            <label>name:</label>
+            <input type="text" name="Name" />
+            <label>email:</label>
+            <input type="text" name="Email" />
+            <label>comment</label>
+            <input type="text" name="Comment" />
+            <input type="button" value="submit" />
+        </form>
+    </div>
+</body>
+</html>

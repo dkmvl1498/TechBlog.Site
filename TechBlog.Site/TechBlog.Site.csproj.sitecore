@@ -2,4 +2,8 @@
   <PropertyGroup>
     <Site Server="https://site.tech.blog.glass.sc" UserName="sitecore\admin" IsRemoteSitecore="False" />
   </PropertyGroup>
+  <File Include="Views\Detail\Layout\DetaiLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="/Views/Detail/Layout/DetaiLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{B2FAF509-DF2A-4764-96A0-038BBB7B434B}</Item>
+  </File>
 </Project>

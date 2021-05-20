@@ -1,0 +1,18 @@
+﻿@model TechBlog.Site.Models.sitecore.templates.TechBlog_Temp.Page_Site
+@using Glass.Mapper.Sc.Web.Mvc
+
+<h3>List reader comment</h3>
+@if (Model.childrenCmt != null)
+{
+    foreach (var item in Model.childrenCmt)
+    {
+        <label>@item.Name</label>
+        <label>Email: @item.Email</label>
+        <p>@item.Comment</p>
+        <label>Time: @item.Time_Cmt.ToString()</label>
+    }
+}
+else
+{
+    <label>Không có comment</label>
+}
