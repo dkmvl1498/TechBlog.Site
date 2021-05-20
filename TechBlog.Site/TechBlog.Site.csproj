@@ -139,6 +139,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Base\GlassBase.cs" />
+    <Compile Include="Models\commentUpload.cs" />
     <Compile Include="Models\ListCmt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

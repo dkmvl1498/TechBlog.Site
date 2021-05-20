@@ -1,4 +1,6 @@
 ﻿using Glass.Mapper.Sc;
+using Sitecore.Data.Items;
+using Sitecore.SecurityModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +25,32 @@ namespace TechBlog.Site.Controllers
         }
 
         [HttpPost]
-        public JsonResult uploadCmt()
+        public JsonResult uploadCmt(Comment_Temp data)
         {
-            return Json(new { Result = "true" });
+            var context = new SitecoreContext();
+            var masterSv = new SitecoreService("master");
+            var idParent = context.GetItem<Item>(data.idParent.ToString());
+            if(idParent != null)
+            {
+                string nameCmt = "user" + DateTime.Now.ToString("dddd, dd MMMM yyyy");
+                var template = context.GetItem<Item>(IComment_TempConstants.TemplateIdString);
+                using (new SecurityDisabler())
+                {
+                    var templateItem = new TemplateItem(template);
+                    var itemChild = idParent.Add(nameCmt, templateItem);
+                    itemChild.Editing.BeginEdit();
+                    itemChild.Fields["name"].Value = data.Name;
+                    itemChild.Fields["email"].Value = data.Email;
+                    itemChild.Fields["comment"].Value = data.Comment;
+                    itemChild.Fields["time cmt"].Value = Sitecore.DateUtil.ToIsoDate(DateTime.Now);
+                    itemChild.Editing.EndEdit();
+                }
+                return Json(new { Result = "true" });
+            }
+            else
+            {
+                return Json(new { Result = "false" });
+            }
         }
     }
 }
