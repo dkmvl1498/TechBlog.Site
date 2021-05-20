@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="https://site.tech.blog.glass.sc" UserName="sitecore\admin" IsRemoteSitecore="False" />
+  </PropertyGroup>
+</Project>

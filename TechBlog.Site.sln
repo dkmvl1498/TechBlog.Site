@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1500
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechBlog.Site", "TechBlog.Site\TechBlog.Site.csproj", "{ABDB3551-1E19-47EF-85C4-EB536C6769B8}"
 EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "TDS.Master", "TDS.Master\TDS.Master.scproj", "{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{ABDB3551-1E19-47EF-85C4-EB536C6769B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABDB3551-1E19-47EF-85C4-EB536C6769B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABDB3551-1E19-47EF-85C4-EB536C6769B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BB6BE0-2778-4D7C-BFA8-B1FBBE3412DC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
