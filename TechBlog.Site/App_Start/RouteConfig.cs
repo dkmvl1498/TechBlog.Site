@@ -19,5 +19,18 @@ namespace TechBlog.Site
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
+        protected void Configure(HttpConfiguration configuration)
+        {
+            var routes = configuration.Routes;
+            //routes.MapHttpRoute(
+            //"VillageHouseExternalAPI",
+            //"api/villagehouse/External/{action}",
+            //new { controller = "Home" });
+
+            var route = routes.MapHttpRoute(
+            "VillageHouseAPI",
+            "api/villagehouse/{controller}/{action}");
+
+        }
     }
 }
