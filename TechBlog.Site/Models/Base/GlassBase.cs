@@ -4,23 +4,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #pragma warning disable 1591
 #pragma warning disable 0108
 //------------------------------------------------------------------------------
@@ -41,7 +24,6 @@ using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Fields;
 using Sitecore.Globalization;
 using Sitecore.Data;
-
 
 
 
@@ -89,8 +71,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	[SitecoreType(TemplateId=IPage_SiteConstants.TemplateIdString )] //, Cachable = true
 	public partial interface IPage_Site : IGlassBase 
 	{
-			
-					/// <summary>
+								/// <summary>
 					/// The name page field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -100,8 +81,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPage_SiteConstants.Name_PageFieldName)]
 					string Name_Page  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The title field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -111,8 +91,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPage_SiteConstants.TitleFieldName)]
 					string Title  {get; set;}
 			
-			
-	}
+				}
 
 
 	public static partial class IPage_SiteConstants{
@@ -121,13 +100,11 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Page site";
 
-		
-			
+					
 			public static readonly ID Name_PageFieldId = new ID("8faa112c-4508-4159-ab9a-f13c305b6a8e");
 			public const string Name_PageFieldName = "name page";
 			
-		
-			
+					
 			public static readonly ID TitleFieldId = new ID("a93a5815-56f3-4b39-9258-cc17ac143cff");
 			public const string TitleFieldName = "title";
 			
@@ -146,8 +123,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	public partial class Page_Site  : GlassBase, IPage_Site 
 	{
 	   
-		
-				/// <summary>
+						/// <summary>
 				/// The name page field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -158,8 +134,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPage_SiteConstants.Name_PageFieldName)]
 				public virtual string Name_Page  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The title field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -172,7 +147,6 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					
 			
 	}
-
 }
 namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 {
@@ -187,8 +161,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	[SitecoreType(TemplateId=ISite_TempConstants.TemplateIdString )] //, Cachable = true
 	public partial interface ISite_Temp : IGlassBase 
 	{
-			
-					/// <summary>
+								/// <summary>
 					/// The description field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -198,8 +171,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(ISite_TempConstants.DescriptionFieldName)]
 					string Description  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The name site field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -209,8 +181,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(ISite_TempConstants.Name_SiteFieldName)]
 					string Name_Site  {get; set;}
 			
-			
-	}
+				}
 
 
 	public static partial class ISite_TempConstants{
@@ -219,13 +190,11 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Site Temp";
 
-		
-			
+					
 			public static readonly ID DescriptionFieldId = new ID("243873f5-c2b6-49ba-a563-7abe1b236148");
 			public const string DescriptionFieldName = "description";
 			
-		
-			
+					
 			public static readonly ID Name_SiteFieldId = new ID("065654d3-909e-459a-af6a-b221c986dffc");
 			public const string Name_SiteFieldName = "name site";
 			
@@ -244,8 +213,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	public partial class Site_Temp  : GlassBase, ISite_Temp 
 	{
 	   
-		
-				/// <summary>
+						/// <summary>
 				/// The description field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -256,8 +224,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(ISite_TempConstants.DescriptionFieldName)]
 				public virtual string Description  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The name site field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -270,7 +237,6 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					
 			
 	}
-
 }
 namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 {
@@ -285,8 +251,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	[SitecoreType(TemplateId=IPosts_TempConstants.TemplateIdString )] //, Cachable = true
 	public partial interface IPosts_Temp : IGlassBase 
 	{
-			
-					/// <summary>
+								/// <summary>
 					/// The content1 field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -296,8 +261,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Content1FieldName)]
 					string Content1  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The content2 field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -307,8 +271,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Content2FieldName)]
 					string Content2  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The content3 field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -318,8 +281,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Content3FieldName)]
 					string Content3  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The desciption field.
 					/// <para></para>
 					/// <para>Field Type: Multi-Line Text</para>		
@@ -329,8 +291,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.DesciptionFieldName)]
 					string Desciption  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The img banner post field.
 					/// <para></para>
 					/// <para>Field Type: Image</para>		
@@ -340,8 +301,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Img_Banner_PostFieldName)]
 					Image Img_Banner_Post  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The img content1 field.
 					/// <para></para>
 					/// <para>Field Type: Image</para>		
@@ -351,8 +311,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Img_Content1FieldName)]
 					Image Img_Content1  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The img content2 field.
 					/// <para></para>
 					/// <para>Field Type: Image</para>		
@@ -362,8 +321,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Img_Content2FieldName)]
 					Image Img_Content2  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The img content3 field.
 					/// <para></para>
 					/// <para>Field Type: Image</para>		
@@ -373,8 +331,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Img_Content3FieldName)]
 					Image Img_Content3  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The time post field.
 					/// <para></para>
 					/// <para>Field Type: Datetime</para>		
@@ -384,8 +341,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Time_PostFieldName)]
 					DateTime Time_Post  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The title posts field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -395,8 +351,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPosts_TempConstants.Title_PostsFieldName)]
 					string Title_Posts  {get; set;}
 			
-			
-	}
+				}
 
 
 	public static partial class IPosts_TempConstants{
@@ -405,53 +360,43 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "Posts Temp";
 
-		
-			
+					
 			public static readonly ID Content1FieldId = new ID("efe34efb-210c-46b6-8686-877e0cd253cf");
 			public const string Content1FieldName = "content1";
 			
-		
-			
+					
 			public static readonly ID Content2FieldId = new ID("8a0312a5-3a24-476f-a734-9f3de3827e9f");
 			public const string Content2FieldName = "content2";
 			
-		
-			
+					
 			public static readonly ID Content3FieldId = new ID("59e08034-4d25-475c-a535-2499ea2aae8a");
 			public const string Content3FieldName = "content3";
 			
-		
-			
+					
 			public static readonly ID DesciptionFieldId = new ID("218237d4-76d8-419a-8a4b-83b0982ba579");
 			public const string DesciptionFieldName = "desciption";
 			
-		
-			
+					
 			public static readonly ID Img_Banner_PostFieldId = new ID("8a23b6c5-a8b8-4e35-afec-5c3c29409a9b");
 			public const string Img_Banner_PostFieldName = "img banner post";
 			
-		
-			
+					
 			public static readonly ID Img_Content1FieldId = new ID("dc608aa1-0f08-4fdc-8082-dc76c18fe7dc");
 			public const string Img_Content1FieldName = "img content1";
 			
-		
-			
+					
 			public static readonly ID Img_Content2FieldId = new ID("ccbde96b-8ab2-4c33-9d38-9518870cc972");
 			public const string Img_Content2FieldName = "img content2";
 			
-		
-			
+					
 			public static readonly ID Img_Content3FieldId = new ID("bccbd1d6-2887-46e6-86fe-3a1c06eab29f");
 			public const string Img_Content3FieldName = "img content3";
 			
-		
-			
+					
 			public static readonly ID Time_PostFieldId = new ID("2bbca702-854b-470d-8f9d-204bf2ffee20");
 			public const string Time_PostFieldName = "time post";
 			
-		
-			
+					
 			public static readonly ID Title_PostsFieldId = new ID("e6a321a6-6910-4333-94ce-30bc5500fb26");
 			public const string Title_PostsFieldName = "title posts";
 			
@@ -470,8 +415,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	public partial class Posts_Temp  : GlassBase, IPosts_Temp 
 	{
 	   
-		
-				/// <summary>
+						/// <summary>
 				/// The content1 field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -482,8 +426,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Content1FieldName)]
 				public virtual string Content1  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The content2 field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -494,8 +437,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Content2FieldName)]
 				public virtual string Content2  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The content3 field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -506,8 +448,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Content3FieldName)]
 				public virtual string Content3  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The desciption field.
 				/// <para></para>
 				/// <para>Field Type: Multi-Line Text</para>		
@@ -518,8 +459,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.DesciptionFieldName)]
 				public virtual string Desciption  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The img banner post field.
 				/// <para></para>
 				/// <para>Field Type: Image</para>		
@@ -530,8 +470,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Img_Banner_PostFieldName)]
 				public virtual Image Img_Banner_Post  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The img content1 field.
 				/// <para></para>
 				/// <para>Field Type: Image</para>		
@@ -542,8 +481,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Img_Content1FieldName)]
 				public virtual Image Img_Content1  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The img content2 field.
 				/// <para></para>
 				/// <para>Field Type: Image</para>		
@@ -554,8 +492,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Img_Content2FieldName)]
 				public virtual Image Img_Content2  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The img content3 field.
 				/// <para></para>
 				/// <para>Field Type: Image</para>		
@@ -566,8 +503,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Img_Content3FieldName)]
 				public virtual Image Img_Content3  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The time post field.
 				/// <para></para>
 				/// <para>Field Type: Datetime</para>		
@@ -578,8 +514,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IPosts_TempConstants.Time_PostFieldName)]
 				public virtual DateTime Time_Post  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The title posts field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -592,7 +527,6 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					
 			
 	}
-
 }
 namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 {
@@ -607,8 +541,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	[SitecoreType(TemplateId=IComment_TempConstants.TemplateIdString )] //, Cachable = true
 	public partial interface IComment_Temp : IGlassBase 
 	{
-			
-					/// <summary>
+								/// <summary>
 					/// The comment field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -618,8 +551,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IComment_TempConstants.CommentFieldName)]
 					string Comment  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The email field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -629,8 +561,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IComment_TempConstants.EmailFieldName)]
 					string Email  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The name field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -640,19 +571,17 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IComment_TempConstants.NameFieldName)]
 					string Name  {get; set;}
 			
-			
-					/// <summary>
+								/// <summary>
 					/// The time cmt field.
 					/// <para></para>
-					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field Type: Datetime</para>		
 					/// <para>Field ID: b25b6a69-e0c6-4698-9155-c2409f095453</para>
 					/// <para>Custom Data: </para>
 					/// </summary>
 					[SitecoreField(IComment_TempConstants.Time_CmtFieldName)]
-					string Time_Cmt  {get; set;}
+					DateTime Time_Cmt  {get; set;}
 			
-			
-	}
+				}
 
 
 	public static partial class IComment_TempConstants{
@@ -661,23 +590,19 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 			public const string TemplateName = "comment temp";
 
-		
-			
+					
 			public static readonly ID CommentFieldId = new ID("96efb95d-6bf0-44ca-8a30-29b82dc3d0b5");
 			public const string CommentFieldName = "comment";
 			
-		
-			
+					
 			public static readonly ID EmailFieldId = new ID("baf8d579-f763-4f94-876a-cb911f8b835f");
 			public const string EmailFieldName = "email";
 			
-		
-			
+					
 			public static readonly ID NameFieldId = new ID("476f2910-64b3-4ac6-98b1-698f31ea51fb");
 			public const string NameFieldName = "name";
 			
-		
-			
+					
 			public static readonly ID Time_CmtFieldId = new ID("b25b6a69-e0c6-4698-9155-c2409f095453");
 			public const string Time_CmtFieldName = "time cmt";
 			
@@ -696,8 +621,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 	public partial class Comment_Temp  : GlassBase, IComment_Temp 
 	{
 	   
-		
-				/// <summary>
+						/// <summary>
 				/// The comment field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -708,8 +632,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IComment_TempConstants.CommentFieldName)]
 				public virtual string Comment  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The email field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -720,8 +643,7 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IComment_TempConstants.EmailFieldName)]
 				public virtual string Email  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The name field.
 				/// <para></para>
 				/// <para>Field Type: Single-Line Text</para>		
@@ -732,19 +654,17 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[SitecoreField(IComment_TempConstants.NameFieldName)]
 				public virtual string Name  {get; set;}
 					
-		
-				/// <summary>
+						/// <summary>
 				/// The time cmt field.
 				/// <para></para>
-				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field Type: Datetime</para>		
 				/// <para>Field ID: b25b6a69-e0c6-4698-9155-c2409f095453</para>
 				/// <para>Custom Data: </para>
 				/// </summary>
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IComment_TempConstants.Time_CmtFieldName)]
-				public virtual string Time_Cmt  {get; set;}
+				public virtual DateTime Time_Cmt  {get; set;}
 					
 			
 	}
-
 }

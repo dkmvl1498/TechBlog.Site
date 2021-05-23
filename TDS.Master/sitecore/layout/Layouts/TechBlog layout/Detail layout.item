@@ -13,13 +13,13 @@ templatekey: Layout
 field: {A036B2BC-BA04-44F6-A75F-BAE6CD242ABF}
 name: Path
 key: path
-content-length: 40
+content-length: 39
 
-/Views/Detail/Layout/DetailLayout.cshtml
+/Views/Detail/Layout/DetaiLayout.cshtml
 ----version----
 language: en
 version: 1
-revision: c501d628-578a-4ff1-84ae-6d96e2f1e2e2
+revision: aac4a204-5bb3-4b9b-9acf-ffd5a28f2453
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c501d628-578a-4ff1-84ae-6d96e2f1e2e2
+aac4a204-5bb3-4b9b-9acf-ffd5a28f2453
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20210520T040445Z
+20210523T082910Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
