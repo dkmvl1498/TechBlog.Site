@@ -2,6 +2,7 @@
 {
     using Sitecore.Diagnostics;
     using Sitecore.Pipelines;
+    using System.Web.Http;
     using System.Web.Mvc;
     using System.Web.Routing;
 
@@ -11,8 +12,24 @@
     {
         public void Process(PipelineArgs args)
         {
-            RouteTable.Routes.MapRoute("VillageHouseAjax", "ajax/villagehouse/{controller}/{action}/{id}",
-                new { controller = "Default", action = "Index", id = UrlParameter.Optional });
+            GlobalConfiguration.Configure(Configure);
+            
+        }
+
+        protected void Configure(HttpConfiguration configuration)
+        {
+            var routes = configuration.Routes;
+            routes.MapHttpRoute(
+            "TechBlogExternalAPI",
+            "api/techblog/External/{action}",
+            new { controller = "DetaiPage" });
+
+            var route = routes.MapHttpRoute(
+            "TechBlogAPI",
+            "api/techBlog/{controller}/{action}");
+
+            //RouteTable.Routes.MapRoute("CommentAjax", "ajax/Comment/{controller}/{action}/{id}",
+            //    new { controller = "Default", action = "Index", id = UrlParameter.Optional });
         }
     }
 }

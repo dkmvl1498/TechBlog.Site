@@ -34,14 +34,48 @@
     </div>
     <div>
         <form>
+            <input type="hidden" name="idParent" value="@Sitecore.Context.Item.ID" id="idParent"/>
             <label>name:</label>
-            <input type="text" name="Name" />
+            <input type="text" name="Name" id="NameInput"/>
             <label>email:</label>
-            <input type="text" name="Email" />
+            <input type="text" name="Email" id="EmailInput"/>
             <label>comment</label>
-            <input type="text" name="Comment" />
-            <input type="button" value="submit" />
+            <input type="text" name="Comment" id="CommentInput"/>
+            <input type="button" value="submit" id="btnsub"/>
         </form>
     </div>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnsub').click(function () {
+                debugger;
+                var name = $('#NameInput').val();
+                var email = $('#EmailInput').val();
+                var comment = $('#CommentInput').val();
+                var idParent = $('#idParent').val();
+
+                $.ajax({
+                    url: "api/techBlog/DetailPage/uploadCmt",
+                    method:"POST",
+                    data: { name, email, comment, idParent },
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.Result == "true") {
+                            alert("them comment thanh cong");
+                            return true;
+                        }
+                        else {
+                            alert("them comment that bai");
+                            return false;
+                        }
+                    },
+                    error: function (result) {
+                            alert("Error");
+                            return false;
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 </html>

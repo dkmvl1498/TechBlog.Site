@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 
@@ -19,18 +20,18 @@ namespace TechBlog.Site
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
-        protected void Configure(HttpConfiguration configuration)
-        {
-            var routes = configuration.Routes;
-            //routes.MapHttpRoute(
-            //"VillageHouseExternalAPI",
-            //"api/villagehouse/External/{action}",
-            //new { controller = "Home" });
+        //protected void Configure(HttpConfiguration configuration)
+        //{
+        //    var routes = configuration.Routes;
+        //    //routes.MapHttpRoute(
+        //    //"VillageHouseExternalAPI",
+        //    //"api/villagehouse/External/{action}",
+        //    //new { controller = "Home" });
 
-            var route = routes.MapHttpRoute(
-            "VillageHouseAPI",
-            "api/villagehouse/{controller}/{action}");
+        //    var route = routes.MapHttpRoute(
+        //    "TechBlogAPI",
+        //    "api/TechBlog/{controller}/{action}");
 
-        }
+        //}
     }
 }
