@@ -45,5 +45,52 @@ namespace TechBlog.Site.Controllers
                 return Ok(false);
             }
         }
+
+        [HttpPost]
+        public IHttpActionResult VoteStar(StarVote objvote)
+        {
+            var context = new SitecoreContext();
+            var masterSV = new SitecoreService("master");
+            if(objvote.idParent == null)
+            {
+                return Ok(false);
+            }
+            else
+            {
+                var idCurrent = context.GetItem<Item>(objvote.idParent.ToString());
+                List<Item> list = idCurrent.GetChildren().ToList();
+                Item idParent = null;
+                foreach (var item in list)
+                {
+                    if(Guid.Parse(item.TemplateID.ToString()) == Guid.Parse(IStarVoteConstants.TemplateIdString.ToString()))
+                    {
+                        if(item.Fields["Email"].Value != objvote.Email.ToString())
+                        {
+                            idParent = context.GetItem<Item>(item.ID.ToString());
+                        }
+                    }
+                }
+                if(idParent == null)
+                {
+                    return Ok(false);
+                }
+                else
+                {
+                    string nameVote = "user" + DateTime.Now.ToString("dd-MM-yy-hh-ss");
+                    var templateVote = context.GetItem<Item>(IStarVoteConstants.TemplateIdString);
+                    using (new SecurityDisabler())
+                    {
+                        var templateId = new TemplateItem(templateVote);
+                        var itemChild = idParent.Add(nameVote, templateId);
+                        itemChild.Editing.BeginEdit();
+                        itemChild.Fields["Email"].Value = objvote.Email;
+                        itemChild.Fields["number star"].Value = objvote.Number_Star.ToString();
+                        itemChild.Fields["time vote"].Value = Sitecore.DateUtil.ToIsoDate(DateTime.Now);
+                        itemChild.Editing.EndEdit();
+                    }
+                }
+            }
+            return Ok(true);
+        }
     }
 }

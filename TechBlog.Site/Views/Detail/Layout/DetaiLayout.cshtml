@@ -29,6 +29,33 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
     </div>
+    <div class="vote-star">
+        <div>
+            <h3>Vote star for post</h3>
+        </div>
+        <div>
+            <form>
+                <input type="hidden" name="idParent" value="@Sitecore.Context.Item.ID" id="idParent" />
+                <label>Email:</label>
+                <input type="email" name="Email" id="email-vote-star" />
+                <hr />
+                <label>number star</label>
+                <br />
+                <label>1</label>
+                <input type="radio" id="number-star" value="1" name="number-star" />
+                <label>2</label>
+                <input type="radio" id="number-star" value="2" name="number-star" />
+                <label>3</label>
+                <input type="radio" id="number-star" value="3" name="number-star" />
+                <label>4</label>
+                <input type="radio" id="number-star" value="4" name="number-star" />
+                <label>5</label>
+                <input type="radio" id="number-star" value="5" name="number-star" />
+                <br />
+                <input type="button" value="Vote" id="voteBtn" />
+            </form>
+        </div>
+    </div>
     <div class="litscomment">
         @Html.Sitecore().Placeholder("list comment")
     </div>
@@ -44,6 +71,7 @@
             <input type="button" value="submit" id="btnsub"/>
         </form>
     </div>
+
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -61,7 +89,7 @@
                 };
 
                 $.ajax({
-                    url: "Comment/API/UploadCmt",
+                    url: "TechBlog/API/UploadCmt",
                     contentType: 'application/json; charset=utf-8',
                     method: "Post",
                     data: JSON.stringify(obj),
@@ -78,9 +106,45 @@
                         }
                     },
                     error: function (result) {
-                            alert("Error");
-                            return false;
+                        alert("Error");
+                        return false;
                     }
+                })
+            })
+
+            $("#voteBtn").click(function () {
+                debugger;
+                var Email = $("#email-vote-star").val();
+                var number_star = $("input[name=number-star]").val();
+                var idParent = $('#idParent').val();
+                var objvote = {
+                    "Email" : Email,
+                    "number_star": number_star,
+                    "idParent": idParent
+                }
+
+                objvote = JSON.stringify(objvote);
+                $.ajax({
+                    url: "TechBlog/API/VoteStar",
+                    method: "Post",
+                    contentType: 'application/json; charset=utf-8',
+                    data: objvote,
+                    dataType: 'json',
+                    success: function (result) {
+                        if (result == true) {
+                            alert("vote thanh cong");
+                            return true;
+                        }
+                        else {
+                            alert("vote that bai");
+                            return false;
+                        }
+                    },
+                    error: function () {
+                        alert("Error");
+                        return false;
+                    }
+                    
                 })
             })
         })

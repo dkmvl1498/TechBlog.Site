@@ -4,7 +4,7 @@
 <h3>List reader comment</h3>
 @if (Model.childrenCmt != null)
 {
-    foreach (var item in Model.childrenCmt)
+    foreach (var item in Model.childrenCmt.OrderByDescending(x=>x.Time_Cmt).ToList().Take(3))
     {
         <div>
             <label>@item.Name</label><br />

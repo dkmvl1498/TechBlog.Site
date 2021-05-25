@@ -91,6 +91,16 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					[SitecoreField(IPage_SiteConstants.TitleFieldName)]
 					string Title  {get; set;}
 			
+								/// <summary>
+					/// The Vote Item field.
+					/// <para></para>
+					/// <para>Field Type: Droplist</para>		
+					/// <para>Field ID: ca57a1be-862c-4180-b446-6e687dd15354</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IPage_SiteConstants.Vote_ItemFieldName)]
+					string Vote_Item  {get; set;}
+			
 				}
 
 
@@ -107,6 +117,10 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					
 			public static readonly ID TitleFieldId = new ID("a93a5815-56f3-4b39-9258-cc17ac143cff");
 			public const string TitleFieldName = "title";
+			
+					
+			public static readonly ID Vote_ItemFieldId = new ID("ca57a1be-862c-4180-b446-6e687dd15354");
+			public const string Vote_ItemFieldName = "Vote Item";
 			
 			
 
@@ -144,6 +158,17 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IPage_SiteConstants.TitleFieldName)]
 				public virtual string Title  {get; set;}
+					
+						/// <summary>
+				/// The Vote Item field.
+				/// <para></para>
+				/// <para>Field Type: Droplist</para>		
+				/// <para>Field ID: ca57a1be-862c-4180-b446-6e687dd15354</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IPage_SiteConstants.Vote_ItemFieldName)]
+				public virtual string Vote_Item  {get; set;}
 					
 			
 	}
@@ -524,6 +549,146 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IPosts_TempConstants.Title_PostsFieldName)]
 				public virtual string Title_Posts  {get; set;}
+					
+			
+	}
+}
+namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
+{
+
+
+ 	/// <summary>
+	/// IStarVote Interface
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/TechBlog Temp/StarVote</para>	
+	/// <para>ID: 6770d6ee-e231-4850-a931-e8aea22ab959</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IStarVoteConstants.TemplateIdString )] //, Cachable = true
+	public partial interface IStarVote : IGlassBase 
+	{
+								/// <summary>
+					/// The Email field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: 81798a34-131e-43d3-bd38-0e7a6668c86a</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IStarVoteConstants.EmailFieldName)]
+					string Email  {get; set;}
+			
+								/// <summary>
+					/// The number star field.
+					/// <para></para>
+					/// <para>Field Type: Number</para>		
+					/// <para>Field ID: 64fccb31-6a8c-45b4-b9f9-43946d10f53e</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IStarVoteConstants.Number_StarFieldName)]
+					float Number_Star  {get; set;}
+			
+								/// <summary>
+					/// The time vote field.
+					/// <para></para>
+					/// <para>Field Type: Datetime</para>		
+					/// <para>Field ID: c27e189a-047d-4d84-a26f-6086dc16fd4f</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IStarVoteConstants.Time_VoteFieldName)]
+					DateTime Time_Vote  {get; set;}
+			
+								/// <summary>
+					/// The title field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: d6137184-e2e9-4e90-a139-85d66b3b272b</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IStarVoteConstants.TitleFieldName)]
+					string Title  {get; set;}
+			
+				}
+
+
+	public static partial class IStarVoteConstants{
+
+			public const string TemplateIdString = "6770d6ee-e231-4850-a931-e8aea22ab959";
+			public static readonly ID TemplateId = new ID(TemplateIdString);
+			public const string TemplateName = "StarVote";
+
+					
+			public static readonly ID EmailFieldId = new ID("81798a34-131e-43d3-bd38-0e7a6668c86a");
+			public const string EmailFieldName = "Email";
+			
+					
+			public static readonly ID Number_StarFieldId = new ID("64fccb31-6a8c-45b4-b9f9-43946d10f53e");
+			public const string Number_StarFieldName = "number star";
+			
+					
+			public static readonly ID Time_VoteFieldId = new ID("c27e189a-047d-4d84-a26f-6086dc16fd4f");
+			public const string Time_VoteFieldName = "time vote";
+			
+					
+			public static readonly ID TitleFieldId = new ID("d6137184-e2e9-4e90-a139-85d66b3b272b");
+			public const string TitleFieldName = "title";
+			
+			
+
+	}
+
+	
+	/// <summary>
+	/// StarVote
+	/// <para></para>
+	/// <para>Path: /sitecore/templates/TechBlog Temp/StarVote</para>	
+	/// <para>ID: 6770d6ee-e231-4850-a931-e8aea22ab959</para>	
+	/// </summary>
+	[SitecoreType(TemplateId=IStarVoteConstants.TemplateIdString)] //, Cachable = true
+	public partial class StarVote  : GlassBase, IStarVote 
+	{
+	   
+						/// <summary>
+				/// The Email field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 81798a34-131e-43d3-bd38-0e7a6668c86a</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IStarVoteConstants.EmailFieldName)]
+				public virtual string Email  {get; set;}
+					
+						/// <summary>
+				/// The number star field.
+				/// <para></para>
+				/// <para>Field Type: Number</para>		
+				/// <para>Field ID: 64fccb31-6a8c-45b4-b9f9-43946d10f53e</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IStarVoteConstants.Number_StarFieldName)]
+				public virtual float Number_Star  {get; set;}
+					
+						/// <summary>
+				/// The time vote field.
+				/// <para></para>
+				/// <para>Field Type: Datetime</para>		
+				/// <para>Field ID: c27e189a-047d-4d84-a26f-6086dc16fd4f</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IStarVoteConstants.Time_VoteFieldName)]
+				public virtual DateTime Time_Vote  {get; set;}
+					
+						/// <summary>
+				/// The title field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: d6137184-e2e9-4e90-a139-85d66b3b272b</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IStarVoteConstants.TitleFieldName)]
+				public virtual string Title  {get; set;}
 					
 			
 	}

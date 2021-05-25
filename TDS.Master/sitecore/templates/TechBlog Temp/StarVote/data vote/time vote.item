@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {A93A5815-56F3-4B39-9258-CC17AC143CFF}
+id: {C27E189A-047D-4D84-A26F-6086DC16FD4F}
 database: master
-path: /sitecore/templates/TechBlog Temp/Page site/Data Page/title
-parent: {B47FC745-DC3D-43A5-849A-C077320E56D6}
-name: title
+path: /sitecore/templates/TechBlog Temp/StarVote/data vote/time vote
+parent: {6B2A9425-6A5A-49D6-84F3-90174AB52663}
+name: time vote
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -13,20 +13,20 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 16
+content-length: 8
 
-Single-Line Text
+Datetime
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
 content-length: 3
 
-200
+400
 ----version----
 language: en
 version: 1
-revision: 830e3adc-7617-41da-a436-a0e53376c453
+revision: 8f7bec15-7ce9-46bb-a632-d2d8dcc7c522
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,21 +34,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20210520T032026Z
+20210525T040221Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-830e3adc-7617-41da-a436-a0e53376c453
+8f7bec15-7ce9-46bb-a632-d2d8dcc7c522
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20210525T072259Z
+20210525T040304Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {A13EC990-5095-4991-AAE3-2602EAB3967A}
+database: master
+path: /sitecore/content/Tech Blog/detail/user25-05-21-10-35
+parent: {F034662F-1118-4CD0-9AB0-AD8D9ED6F2A6}
+name: user25-05-21-10-35
+master: {00000000-0000-0000-0000-000000000000}
+template: {FE16F76D-F2C0-4EB2-AC30-D877608E1DD1}
+templatekey: comment temp
+
+----version----
+language: en
+version: 1
+revision: 512ddd24-73a0-449e-a2f9-d3b36329a065
+
+----field----
+field: {476F2910-64B3-4AC6-98B1-698F31EA51FB}
+name: name
+key: name
+content-length: 12
+
+Cao Sơn Tùng
+----field----
+field: {BAF8D579-F763-4F94-876A-CB911F8B835F}
+name: email
+key: email
+content-length: 21
+
+sontung1498@gmail.com
+----field----
+field: {96EFB95D-6BF0-44CA-8A30-29B82DC3D0B5}
+name: comment
+key: comment
+content-length: 16
+
+comment van minh
+----field----
+field: {B25B6A69-E0C6-4698-9155-C2409F095453}
+name: time cmt
+key: time cmt
+content-length: 15
+
+20210525T103335
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 18
+
+extranet\Anonymous
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20210525T033335Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+extranet\Anonymous
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+512ddd24-73a0-449e-a2f9-d3b36329a065
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20210525T033335Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 18
+
+extranet\Anonymous

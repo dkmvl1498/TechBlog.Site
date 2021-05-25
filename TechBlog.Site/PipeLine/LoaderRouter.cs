@@ -20,8 +20,8 @@
         {
             var routes = configuration.Routes;
             var route = routes.MapHttpRoute(
-            "CommentAPI",
-            "Comment/{controller}/{action}");
+            "TechBlogAPI",
+            "TechBlog/{controller}/{action}");
 
             //routes.MapHttpRoute(
             //"TechBlogExternalAPI",
