@@ -53,15 +53,23 @@
                 var email = $('#EmailInput').val();
                 var comment = $('#CommentInput').val();
                 var idParent = $('#idParent').val();
+                var obj = {
+                    "name": name,
+                    "email": email,
+                    "comment": comment,
+                    "idParent": idParent
+                };
 
                 $.ajax({
-                    url: "api/techBlog/DetailPage/uploadCmt",
-                    method:"POST",
-                    data: { name, email, comment, idParent },
+                    url: "Comment/API/UploadCmt",
+                    contentType: 'application/json; charset=utf-8',
+                    method: "Post",
+                    data: JSON.stringify(obj),
                     dataType: "json",
                     success: function (result) {
-                        if (result.Result == "true") {
+                        if (result == true) {
                             alert("them comment thanh cong");
+                            location.reload();
                             return true;
                         }
                         else {

@@ -19,14 +19,14 @@
         protected void Configure(HttpConfiguration configuration)
         {
             var routes = configuration.Routes;
-            routes.MapHttpRoute(
-            "TechBlogExternalAPI",
-            "api/techblog/External/{action}",
-            new { controller = "DetaiPage" });
-
             var route = routes.MapHttpRoute(
-            "TechBlogAPI",
-            "api/techBlog/{controller}/{action}");
+            "CommentAPI",
+            "Comment/{controller}/{action}");
+
+            //routes.MapHttpRoute(
+            //"TechBlogExternalAPI",
+            //"api/techblog/External/{action}",
+            //new { controller = "DetaiPage" });
 
             //RouteTable.Routes.MapRoute("CommentAjax", "ajax/Comment/{controller}/{action}/{id}",
             //    new { controller = "Default", action = "Index", id = UrlParameter.Optional });

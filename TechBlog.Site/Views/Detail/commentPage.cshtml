@@ -6,10 +6,13 @@
 {
     foreach (var item in Model.childrenCmt)
     {
-        <label>@item.Name</label>
-        <label>Email: @item.Email</label>
-        <p>@item.Comment</p>
-        <label>Time: @item.Time_Cmt.ToString()</label>
+        <div>
+            <label>@item.Name</label><br />
+            <label>Email: @item.Email</label>
+            <p>@item.Comment</p>
+            <label>Time: @item.Time_Cmt.ToString()</label>
+        </div>
+        <br />
     }
 }
 else
