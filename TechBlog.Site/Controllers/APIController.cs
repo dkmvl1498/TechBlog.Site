@@ -18,14 +18,14 @@ namespace TechBlog.Site.Controllers
         {
             var context = new SitecoreContext();
             var masterSV = new SitecoreService("master");
-            if(obj.idParent == null)
+            if (obj.idParent == null)
             {
                 return Ok(false);
             }
             else
             {
                 var idParent = context.GetItem<Item>(obj.idParent.ToString());
-                if(idParent != null)
+                if (idParent != null)
                 {
                     string nameCmt = "user" + DateTime.Now.ToString("dd-MM-yy-hh-ss");
                     var templateCmt = context.GetItem<Item>(IComment_TempConstants.TemplateIdString);
@@ -51,7 +51,7 @@ namespace TechBlog.Site.Controllers
         {
             var context = new SitecoreContext();
             var masterSV = new SitecoreService("master");
-            if(objvote.idParent == null)
+            if (objvote.idParent == null)
             {
                 return Ok(false);
             }
@@ -62,15 +62,31 @@ namespace TechBlog.Site.Controllers
                 Item idParent = null;
                 foreach (var item in list)
                 {
-                    if(Guid.Parse(item.TemplateID.ToString()) == Guid.Parse(IStarVoteConstants.TemplateIdString.ToString()))
+                    if (Guid.Parse(item.TemplateID.ToString()) == Guid.Parse(IStarVoteConstants.TemplateIdString.ToString()))
                     {
-                        if(item.Fields["Email"].Value != objvote.Email.ToString())
+                        if(item.Children.Count != 0)
+                        {
+                            foreach (var items in item.GetChildren().ToList())
+                            {
+                                Item itemCheck = Sitecore.Context.Database.Items.GetItem(items.ID);
+                                if (itemCheck.Fields["Email"].ToString() == objvote.Email.ToString())
+                                {
+                                    idParent = null;
+                                    break;
+                                }
+                                else
+                                {
+                                    idParent = context.GetItem<Item>(item.ID.ToString());
+                                }
+                            }
+                        }
+                        else
                         {
                             idParent = context.GetItem<Item>(item.ID.ToString());
                         }
                     }
                 }
-                if(idParent == null)
+                if (idParent == null)
                 {
                     return Ok(false);
                 }
@@ -87,10 +103,40 @@ namespace TechBlog.Site.Controllers
                         itemChild.Fields["number star"].Value = objvote.Number_Star.ToString();
                         itemChild.Fields["time vote"].Value = Sitecore.DateUtil.ToIsoDate(DateTime.Now);
                         itemChild.Editing.EndEdit();
+                        numberVote(objvote.idParent.ToString());
                     }
                 }
             }
             return Ok(true);
+        }
+
+        public bool numberVote(string idPage)
+        {
+            int numberStar = 0;
+            var context = new SitecoreContext();
+            var model = context.GetItem<Page_Site>(idPage.ToString());
+            List<StarVote> listVote = model.listVote.ToList();
+            foreach (var item in listVote)
+            {
+                numberStar = int.Parse(item.Number_Star.ToString()) + numberStar;
+            }
+            double avgVote = Math.Round(float.Parse(numberStar.ToString()) / float.Parse(listVote.Count().ToString()), 2);
+            model.NumberVote = avgVote.ToString();
+            using (new SecurityDisabler())
+            {
+                Item itemPage = context.GetItem<Item>(idPage.ToString());
+                try
+                {
+                    itemPage.Editing.BeginEdit();
+                    itemPage.Fields["NumberVote"].Value = avgVote.ToString();
+                    itemPage.Editing.EndEdit();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
         }
     }
 }

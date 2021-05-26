@@ -115,7 +115,7 @@
             $("#voteBtn").click(function () {
                 debugger;
                 var Email = $("#email-vote-star").val();
-                var number_star = $("input[name=number-star]").val();
+                var number_star = $('input[name="number-star"]:checked').val();
                 var idParent = $('#idParent').val();
                 var objvote = {
                     "Email" : Email,
@@ -144,7 +144,6 @@
                         alert("Error");
                         return false;
                     }
-                    
                 })
             })
         })

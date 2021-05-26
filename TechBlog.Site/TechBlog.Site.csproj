@@ -187,6 +187,7 @@
     <Compile Include="Models\Base\GlassBase.cs" />
     <Compile Include="Models\commentUpload.cs" />
     <Compile Include="Models\ListCmt.cs" />
+    <Compile Include="Models\ListVote.cs" />
     <Compile Include="Models\StarVoteModel.cs" />
     <Compile Include="PipeLine\LoaderRouter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,6 +205,8 @@
     <Content Include="Views\Detail\commentPage.cshtml" />
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -213,7 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <PropertyGroup>

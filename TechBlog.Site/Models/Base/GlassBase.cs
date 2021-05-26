@@ -82,6 +82,16 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					string Name_Page  {get; set;}
 			
 								/// <summary>
+					/// The NumberVote field.
+					/// <para></para>
+					/// <para>Field Type: Single-Line Text</para>		
+					/// <para>Field ID: 7c858e01-925d-4e77-aab9-59ff9366cbef</para>
+					/// <para>Custom Data: </para>
+					/// </summary>
+					[SitecoreField(IPage_SiteConstants.NumberVoteFieldName)]
+					string NumberVote  {get; set;}
+			
+								/// <summary>
 					/// The title field.
 					/// <para></para>
 					/// <para>Field Type: Single-Line Text</para>		
@@ -113,6 +123,10 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 					
 			public static readonly ID Name_PageFieldId = new ID("8faa112c-4508-4159-ab9a-f13c305b6a8e");
 			public const string Name_PageFieldName = "name page";
+			
+					
+			public static readonly ID NumberVoteFieldId = new ID("7c858e01-925d-4e77-aab9-59ff9366cbef");
+			public const string NumberVoteFieldName = "NumberVote";
 			
 					
 			public static readonly ID TitleFieldId = new ID("a93a5815-56f3-4b39-9258-cc17ac143cff");
@@ -147,6 +161,17 @@ namespace TechBlog.Site.Models.sitecore.templates.TechBlog_Temp
 				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
 				[SitecoreField(IPage_SiteConstants.Name_PageFieldName)]
 				public virtual string Name_Page  {get; set;}
+					
+						/// <summary>
+				/// The NumberVote field.
+				/// <para></para>
+				/// <para>Field Type: Single-Line Text</para>		
+				/// <para>Field ID: 7c858e01-925d-4e77-aab9-59ff9366cbef</para>
+				/// <para>Custom Data: </para>
+				/// </summary>
+				[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Team Development for Sitecore - GlassItem.tt", "1.0")]
+				[SitecoreField(IPage_SiteConstants.NumberVoteFieldName)]
+				public virtual string NumberVote  {get; set;}
 					
 						/// <summary>
 				/// The title field.
