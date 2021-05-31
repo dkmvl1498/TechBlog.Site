@@ -1,0 +1,64 @@
+﻿@model TechBlog.Site.Models.sitecore.templates.TechBlog_Temp.Posts_Temp
+@using Glass.Mapper.Sc.Web.Mvc;
+
+<div>
+    <h2>@Html.Glass().Editable(Model, x => x.Title_Posts)</h2>
+    <div>
+        @Html.Glass().RenderImage(Model, x => x.Img_Banner_Post, new { @class = "imgpost" }, isEditable: true)
+    </div>
+    <label>
+        @Html.Glass().Editable(Model, x => x.Desciption)
+    </label>
+    <p>
+        @Html.Glass().Editable(Model, x => x.Content1)
+    </p>
+    <div>
+        @Html.Glass().RenderImage(Model, x => x.Img_Content1, new { @class = "imgpost" }, isEditable: true)
+    </div>
+    <p>
+        @Html.Glass().Editable(Model, x => x.Content2)
+    </p>
+    <div>
+        @Html.Glass().RenderImage(Model, x => x.Img_Content2, new { @class = "imgpost" }, isEditable: true)
+    </div>
+</div>
+<div class="vote-star">
+    <div>
+        <h3>Vote star for post</h3>
+        <label>Avg number star post: @Html.Sitecore().Field("NumberVote")</label>
+    </div>
+    <div>
+        <form>
+            <input type="hidden" name="idParent" value="@Model.Id" id="idParent" />
+            <label>Email:</label>
+            <input type="email" name="Email" id="email-vote-star" />
+            <hr />
+            <label>number star</label>
+            <br />
+            <label>1</label>
+            <input type="radio" id="number-star" value="1" name="number-star" />
+            <label>2</label>
+            <input type="radio" id="number-star" value="2" name="number-star" />
+            <label>3</label>
+            <input type="radio" id="number-star" value="3" name="number-star" />
+            <label>4</label>
+            <input type="radio" id="number-star" value="4" name="number-star" />
+            <label>5</label>
+            <input type="radio" id="number-star" value="5" name="number-star" />
+            <br />
+            <input type="button" value="Vote" id="voteBtn" />
+        </form>
+    </div>
+</div>
+<div>
+    <form>
+        <input type="hidden" name="idParent" value="@Model.Id" id="idParent" />
+        <label>name:</label>
+        <input type="text" name="Name" id="NameInput" />
+        <label>email:</label>
+        <input type="text" name="Email" id="EmailInput" />
+        <label>comment</label>
+        <input type="text" name="Comment" id="CommentInput" />
+        <input type="button" value="submit" id="btnsub" />
+    </form>
+</div>

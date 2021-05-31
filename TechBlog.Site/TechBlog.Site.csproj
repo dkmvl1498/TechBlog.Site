@@ -161,12 +161,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\404-error-not-found-page-lost-1024x788.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="App_Config\Include\LoaderRouter.config" />
+    <Content Include="App_Config\Include\ZConfig\MySiteCore.config" />
+    <Content Include="App_Config\Include\NotFoundResolver.config" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -181,14 +184,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\DetailPageController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Base\GlassBase.cs" />
     <Compile Include="Models\commentUpload.cs" />
     <Compile Include="Models\ListCmt.cs" />
+    <Compile Include="Models\ListPostData.cs" />
     <Compile Include="Models\ListVote.cs" />
     <Compile Include="Models\StarVoteModel.cs" />
+    <Compile Include="PipeLine\HttpRequest\CustomLibrary.Links.cs" />
+    <Compile Include="PipeLine\HttpRequest\NotFoundResolver.cs" />
     <Compile Include="PipeLine\LoaderRouter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -206,7 +214,12 @@
     <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\MasterLayout\MasterLayout.cshtml" />
+    <Content Include="Views\Index\Layout\IndexLayout.cshtml" />
+    <Content Include="Views\Index\Render\LitsPost.cshtml" />
+    <Content Include="Views\Detail\Render\PostDetail.cshtml" />
+    <Content Include="Views\Error\ErrorLayout.cshtml" />
+    <Content Include="Views\Error\ErrorMain.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\ShareRender\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <PropertyGroup>

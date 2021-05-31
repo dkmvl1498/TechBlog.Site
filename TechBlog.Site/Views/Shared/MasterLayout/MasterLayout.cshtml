@@ -1,0 +1,24 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+  Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+  @Html.Sitecore().VisitorIdentification()
+</head>
+  <body>
+      <div>
+          Header
+      </div>
+      <div>
+          @RenderBody()
+      </div>
+      <div>
+          Footer
+      </div>
+  </body>
+</html>

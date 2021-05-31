@@ -6,4 +6,18 @@
   <File Include="/Views/Detail/Layout/DetaiLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{B2FAF509-DF2A-4764-96A0-038BBB7B434B}</Item>
   </File>
+  <File Include="Views\Shared\MasterLayout\MasterLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{858CBE83-29DE-47C9-B043-3479FE4DE232}</Item>
+  </File>
+  <File Include="/Views/Shared/MasterLayout/MasterLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{858CBE83-29DE-47C9-B043-3479FE4DE232}</Item>
+  </File>
+  <File Include="Views\Index\Layout\IndexLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="/Views/Index/Layout/IndexLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{DFA2651C-7448-4862-A360-F8A41DB8F2A5}</Item>
+  </File>
+  <File Include="Views\Error\ErrorLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0" />
+  <File Include="/Views/Error/ErrorLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{BBB1C60D-40FA-4B39-9336-F975F29ED5BE}</Item>
+  </File>
 </Project>

@@ -1,0 +1,24 @@
+﻿@model TechBlog.Site.Models.sitecore.templates.TechBlog_Temp.Page_Site
+@using Glass.Mapper.Sc.Web.Mvc;
+<style>
+    .imgpost{
+        width: 200px;
+        height: 100px;
+        background-size: cover;
+        object-fit: fill;
+    }
+</style>
+<div>
+    <h3>Danh sách bài viết</h3>
+    <div>
+        @foreach(var item in Model.ListPots)
+        {
+            <div>
+                <a href="/Tech Blog/Detail?idPost = @item.Id">
+                    @Html.Glass().RenderImage(item, x => x.Img_Banner_Post, new { @class = "imgpost" }, isEditable: true)
+                    <h3>@Html.Glass().Editable(item, x => x.Title_Posts)</h3>
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -15,7 +15,6 @@
             GlobalConfiguration.Configure(Configure);
             
         }
-
         protected void Configure(HttpConfiguration configuration)
         {
             var routes = configuration.Routes;

@@ -1,0 +1,15 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+  Layout = "~/Views/Shared/MasterLayout/MasterLayout.cshtml";
+}
+<head>
+    <title>@Html.Sitecore().Field("name page")</title>
+</head>
+<h2>
+    Đây là trang index
+
+    @Html.Sitecore().Placeholder("lits post")
+</h2>

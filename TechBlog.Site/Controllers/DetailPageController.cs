@@ -1,4 +1,5 @@
 ﻿using Glass.Mapper.Sc;
+using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Data.Items;
 using Sitecore.SecurityModel;
 using System;
@@ -23,17 +24,19 @@ namespace TechBlog.Site.Controllers
             var model = context.GetCurrentItem<Page_Site>();
             return View("~/Views/Detail/commentPage.cshtml",model);
         }
-        public ActionResult AvgVoteStar()
+        
+        public ActionResult DetailPost(string idPost)
         {
-            int numberStar = 0;
             var context = new SitecoreContext();
-            var model = context.GetCurrentItem<Page_Site>();
-            List<StarVote> listVote = model.listVote.ToList();
-            foreach(var item in listVote)
-            {
-                numberStar = int.Parse(item.Number_Star.ToString());
-            }
-            float avgVote = numberStar / int.Parse(listVote.Count().ToString());
+            var contextDB = new MvcContext();
+            var item = context.GetItem<Posts_Temp>(idPost);
+            return View("~/Views/Detail/Render/PostDetail.cshtml", item);
+        }
+
+        public ActionResult MenuRender()
+        {
+            var context = new SitecoreContext();
+            var model = context.GetHomeItem<Item>();
             return View();
         }
     }

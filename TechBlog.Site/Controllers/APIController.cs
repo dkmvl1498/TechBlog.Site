@@ -72,7 +72,7 @@ namespace TechBlog.Site.Controllers
                                 if (itemCheck.Fields["Email"].ToString() == objvote.Email.ToString())
                                 {
                                     idParent = null;
-                                    break;
+                                    return Ok(false);
                                 }
                                 else
                                 {
@@ -88,7 +88,14 @@ namespace TechBlog.Site.Controllers
                 }
                 if (idParent == null)
                 {
-                    return Ok(false);
+                    string nameList = "Vote-list";
+                    var tempParentVote = context.GetItem<Item>(objvote.idParent);
+                    using (new SecurityDisabler())
+                    {
+                        var templateId = new TemplateItem(tempParentVote);
+                        var itemChild = idParent.Add(nameList, templateId);
+                        idParent = context.GetItem<Item>(itemChild.ID.ToString());
+                    }
                 }
                 else
                 {
